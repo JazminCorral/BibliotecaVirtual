@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block title%}Iniciar Cesión{%endblock%}
+{%block content%}
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.main.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.css.map" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.css" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.css.map" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.css" type="text/css"/>
+
+<br><br><br><br>
+<div class="row">
+
+ <div class="col-md-1"></div>
+      <div class="col-md-10" style ='background-color: rgba(50, 20, 20, .5); border-radius: 10px;'>
+
+ <div class="col-md-4">
+<font face="Calibri" SIZE=5 color = 'white'>
+	¿Perteneces a Red de Bibliotecas?<br>
+</font>
+<font face="Calibri" SIZE=4 color = 'white'>
+	Inicia cesión para que puedas actualizar las noticias sobre tu biblioteca, en el panel de administrador que sera visible en la barra superior tan pronto como introduzcas tu nombre de usuario y contraseña.</font>
+ </div>
+
+      <div class="col-md-5">
+  <br><br>
+
+<form action = "." method = "POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type= "submit" class="btn btn-default btn-lg">Conectarse</button>
+</form>
+
+</div>
+</div>
+ <div class="col-md-1"></div>
+</div>
+{%endblock%}

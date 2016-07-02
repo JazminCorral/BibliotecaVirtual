@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block title%}Error{%endblock%}
+{%block content%}
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.main.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.css.map" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.css" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.css.map" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.css" type="text/css"/>
+
+<br><br><br><br>
+<div class="row">
+
+ <div class="col-md-1"></div>
+      <div class="col-md-10" style ='background-color: rgba(50, 20, 20, .5); border-radius: 10px;'>
+<center>
+	<font color = 'white'>
+ <h2>Ups!</h2>
+ <font color = 'white' Size = 3>
+Lo siento no puedes ingresar una fecha <br>
+anterior, puedes volver a intentar <br>
+ingresar tu evento, con una fecha posterior <br>
+a la actual, presionando el siguiente boton: <br>
+</font>
+<br><br> </font>
+<a href="http://localhost:8000/PanelEvent" class="btn btn-default btn-lg" role="button">Ingresa tu evento</a><br><br>
+ </center>
+
+</div>
+ <div class="col-md-1"></div>
+</div>
+{%endblock%}

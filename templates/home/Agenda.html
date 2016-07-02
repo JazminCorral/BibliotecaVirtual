@@ -1,0 +1,86 @@
+{%extends 'base.html'%}
+{%block title%}Calendario{%endblock%}
+{%block content%}
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.main.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.css.map" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.css" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.css.map" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../static/bootstrap-3.2.0-dist/css/bootstrap.css" type="text/css"/>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.1.1/fullcalendar.min.js"></script>  
+<script src="../../static/bootstrap-3.2.0-dist/js/jquery.js" ></script>
+<script src="../../static/bootstrap-3.2.0-dist/js/bootstrap.js" ></script>
+<script src="../../static/bootstrap-3.2.0-dist/js/bootstrap.min.js" ></script>
+
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<br><br><br><br>
+
+
+<font color="#EEEEEE">
+<div class="row">
+
+ <div class="col-xs-1 col-md-1"></div>
+      <div class="col-xs-10 col-md-10" style ='background-color: rgba(50, 20, 20, .5); border-radius: 20px;'>
+
+
+<center>
+<IMG SRC="/static/image/Eventos.png" style = 'border-radius: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+'>
+  <p>Consulta los eventos publicados por las diferentes bibliotecas</p><br>
+</center>
+  <table class="table" style = 'background-color: white; '>
+    <thead>
+      <tr>
+       <th>Dia y Hora</th>
+  <th>Descripción</th>
+    <th><font face="Calibri" SIZE=3 color = 'white'>............................</font></th>
+  <th>Biblioteca</th>
+      </tr>
+    </thead>
+    <tbody>
+  {%for p in Noticias%}
+
+     <tr>
+        <td><strong>Fecha:</strong> {{p.fecha}}<br><strong>Hora:</strong>{{p.hora}}</td>
+        <td><strong>{{p.titulo}}</strong> <br>{{p.cuerpo}}</td>
+  <td>       
+{% if p.imagen %}
+<font face="Calibri" SIZE=2 color = 'white'>{{p.imagen|length}}</font>
+
+<IMG SRC="/static/{{p.imagen}}" WIDTH=100 HEIGHT=100 > 
+
+ {% else %}
+      
+    {% endif %} </td>
+        <td>{{p.user}}</td>
+
+        </tr>
+
+       {% endfor %}
+    </tbody>
+  </table>
+
+
+
+ </div>
+ <div class="col-xs-1 col-md-1"></div>
+</div>
+</font>
+{%endblock%}

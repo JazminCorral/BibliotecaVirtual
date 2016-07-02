@@ -1,0 +1,219 @@
+<html  >
+    <title>{% block title %}Titulo Base{% endblock %}</title>
+
+
+
+    <link rel="stylesheet" href="static/bootstrap-3.2.0-dist/css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="static/bootstrap-3.2.0-dist/css/bootstrap.css.map" type="text/css"/>
+<link rel="stylesheet" href="static/bootstrap-3.2.0-dist/css/bootstrap-theme.css" type="text/css"/>
+<link rel="stylesheet" href="static/bootstrap-3.2.0-dist/css/bootstrap-theme.css.map" type="text/css"/>
+<link rel="stylesheet" href="static/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" type="text/css"/>
+<link rel="stylesheet" href="static/bootstrap-3.2.0-dist/css/bootstrap.css" type="text/css"/>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style type="text/css"> 
+
+h1 {
+  font-family: Calibri;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 16.5px;
+}
+h3 {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+p {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+blockquote {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+pre {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
+
+.class { 
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; }
+
+
+
+    .navbar-custom {
+        background-color:#330000;
+        color:#ffffff;
+        border-radius:0;
+    }
+
+    .navbar-custom .navbar-nav > li > a {
+        color:#fff;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color:transpare;
+    }
+
+    .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: #330000; 
+    }
+
+    .navbar-custom .navbar-brand {
+        color:#eeeeee;
+    }
+    .navbar-custom .navbar-toggle {
+        background-color:#eeeeee
+    }
+    .navbar-custom .icon-bar {
+        background-color:#ffffff;
+    }
+
+         ul.navbar {
+            position: absolute;
+            top: 0em;
+            left: 0em;
+            width: 0em }
+
+        body { 
+
+            padding-left: 0em;
+            padding-right: 0em;
+
+
+            background: url("/static/image/fondopag.png") no-repeat center center fixed;
+            background-size: cover;
+
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+
+              }
+
+              img {
+    max-width:100%;
+}
+
+ 
+    </style> 
+
+     <header>
+     <div class="row">
+
+ <div class="col-md-1"></div>
+      <div class="col-md-10" style ='background-color: transparent; border-radius: 10px;'>
+    
+
+</p>
+
+ </div>
+ <div class="col-md-1"></div>
+</div>
+          <nav class="navbar navbar-custom navbar-static-top navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://localhost:8000/index">Inicio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:8000/About">Nosotros</a></li>
+        <li class="active"><a href="http://localhost:8000/Directorio">Directorio</a></li>
+         <li class="active"><a href="http://localhost:8000/Noticias">Noticias</a></li>
+        <li class="active"><a href="http://localhost:8000/Agenda">Eventos</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %} 
+        <li class="active"><a href="http://localhost:8000/Panel"><i>Panel de Administrador</i></a></li>
+        {% endif %}
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+        </header>
+
+
+<body>
+   {%block content%}{%endblock%}
+   <div class="row">
+ <div class="col-md-1"></div>
+      <div class="col-md-10" style ='background-color: transparent; border-radius: 10px;'>
+
+</p>
+
+ </div>
+ <div class="col-md-1"></div>
+</div>
+
+ <div class="row">
+
+ <div class="col-md-1"></div>
+      <div class="col-md-12" style ='background-color: #330000; border-radius: 10px;'>
+    
+<br>
+
+<center>
+  <a href="https://www.facebook.com/Red-de-Bibliotecas-P%C3%BAblicas-Municipales-246556285511905/?fref=ts">
+ <IMG SRC="/static/image/fbicon.png" WIDTH=50 HEIGHT=50  >
+  </a> <br><br>
+  <font color="white">
+©2016 | Todos los derechos reservados <br>
+Telefono: 684 9320 <br>
+Correo: reddebibliotecastj@gmail.com<br>
+EsquinaParaJovenes.com.mx : <a href="http://www.tijuana.gob.mx/" style = 'color: #CC3300;'>Ayuntamiento de Tijuana</a><br>
+ {% if user.is_authenticated %} 
+ <a href="http://localhost:8000/Logout/" style = 'color: #990000'> <strong> {{user.username}} </strong>Cerrar Cesión</a>
+{% else %}
+<a href="http://localhost:8000/Login" style = 'color: #990000'>Iniciar Cesión</a>
+{% endif %} <br>
+
+</font>
+</center>
+<br>
+<br>
+ 
+</p>
+
+ </div>
+ <div class="col-md-1"></div>
+</div>
+
+</body>
+    
+
+</html>
